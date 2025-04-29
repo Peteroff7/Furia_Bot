@@ -42,10 +42,7 @@ git clone [link-do-repo]
 pip install python-telegram-bot
 
 
-3. No arquivo principal (bot_furia.py), insira seu token do BotFather.
-
-
-4. Rode o bot:
+3. Rode o bot:
 
 python bot_furia.py
 
@@ -66,4 +63,4 @@ Projeto feito com muito esforço, paixão por tecnologia e respeito pela comunid
 
 Autor
 
-Peteroff7 (Peter Wilhelm Baukat
+Peteroff7 (Peter Wilhelm Baukat)
