@@ -69,7 +69,7 @@ async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         await update.message.reply_text(resposta, parse_mode="Markdown")
         return
-    
+    #Os resultados postos datam até o dia de envio do projeto
     elif "resultados" in mensagem or "último jogo" in mensagem:
         resposta = (
             "*Últimos 3 jogos da Fúria na PGL Bucharest 2025:*\n\n"
@@ -80,7 +80,9 @@ async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
         )
         await update.message.reply_text(resposta, parse_mode="Markdown")
         return
-
+        
+#Aleatorização de curiosidades sobre a FURIA
+    
     curiosidades = [
         "A FURIA foi fundada em 2017 e, em apenas dois anos, já estava competindo em um Major, o IEM Katowice 2019.",
         "O time começou com investimento próprio dos fundadores.",
@@ -90,12 +92,13 @@ async def responder(update: Update, context: ContextTypes.DEFAULT_TYPE):
         "A organização criou uma categoria de base para revelar novos talentos. Foi dessa iniciativa que surgiram jogadores como KSCERATO e ableJ, que ajudaram a equipe a crescer.",
         "O craque do futebol Neymar se envolveu com a organização, participando de eventos e interagindo com os jogadores. A FURIA também expandiu para outras modalidades, como FIFA, Valorant, Rainbow Six e Rocket League.",
     ]
-# Escolhe outra curiosidade aleatória
+
     if "curiosidades" in mensagem or "fatos" in mensagem:
         estado_usuario[user_id] = "curiosidades"
         sort = random.choice(curiosidades)  
         await update.message.reply_text(f"{sort}\n\nQuer mais uma? Digita: mais uma.")
 
+    # Escolhe outra curiosidade aleatória
     elif mensagem == "mais uma":
         if estado_usuario.get(user_id) == "curiosidades":
             sort = random.choice(curiosidades) 
