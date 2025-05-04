@@ -227,7 +227,7 @@ async def sair(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 #Inicialização do bot e configurações adicionais
 if __name__ == "__main__":
-    app = ApplicationBuilder().token("7388289738:AAFITBIkbisg4gfjsjl9dD3aeLUi0dsr7QY").build()
+    app = ApplicationBuilder().token("colar_token_do_bot").build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("menu", menu))
     app.add_handler(CommandHandler("historia", historia))
